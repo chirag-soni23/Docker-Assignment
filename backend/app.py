@@ -6,7 +6,7 @@ CORS(app)
 
 @app.route("/submit",methods=["POST"])
 def submit():
-    data = request.json()
+    data = request.json
     name = data.get('name')
     email = data.get('email')
 
