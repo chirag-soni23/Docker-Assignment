@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 app.post('/submit', async (req, res) => {
   const { name, email } = req.body;
   try {
-    const response = await axios.post('http://localhost:5000/submit', { name, email });
+    const response = await axios.post('http://backend:5000/submit', { name, email });
     res.render('result', { data: response.data });
   } catch (error) {
     console.error('Axios error:', error.response ? error.response.data : error.message);
